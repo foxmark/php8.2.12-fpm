@@ -8,7 +8,7 @@ ARG HOST_GROUP_NAME=app_user
 
 COPY bin/* /usr/local/bin/
 
-RUN apt-get update && apt-get install -y --no-install-recommends libxslt-dev zlib1g-dev g++ git libicu-dev libzip-dev zip librabbitmq-dev \
+RUN apt-get update && apt-get install -y --no-install-recommends libxslt-dev zlib1g-dev g++ git libicu-dev libzip-dev zip unzip librabbitmq-dev \
     && docker-php-ext-install intl opcache pdo pdo_mysql xsl bcmath \
     && pecl install redis \
     && pecl install apcu \
